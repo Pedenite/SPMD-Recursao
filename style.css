@@ -1,5 +1,7 @@
 body{
     font: normal 18px Arial;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 25%, rgba(9,66,113,1) 100%);
 }
 #fogoDoom{
     margin: 0 auto 0 auto;
