@@ -1,0 +1,32 @@
+body{
+    font: normal 18px Arial;
+}
+#fogoDoom{
+    margin: 0 auto 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black
+}
+td{
+    max-width: 100vw;
+    max-height: 100vh;
+    width: calc(70vh/60);
+    height: calc(70vh/60);
+    border: 0px solid black;/*1px*/
+    text-align: center;
+    vertical-align: center;
+    font: monospace;
+    position: relative;
+}
+.index{
+    position: absolute;
+    font-size: 10px;
+    display: inline-block;
+    top: 2px;
+    right: 2px;
+    color: rgba(0, 0, 0, 0.336);
+}
