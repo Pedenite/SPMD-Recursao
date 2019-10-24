@@ -1,2 +1,2 @@
 # SPMD-Recursao
-Trabalho de SPMD 2/2019 - Recursão (Grupo 2)
+Trabalho de Supervisão e Produção de Material Didático 2/2019 UnB - Recursão (Grupo 2)
