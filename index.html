@@ -7,9 +7,32 @@
     <title>SPMD-RECURSÃO</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <div id="fogoDoom"></div>
+<body onload="seqAtual()">
+    <section>
+        <h1>Fogo do Doom</h1>
+        <div id="fogoDoom"></div>
+    </section>
+
+    <section>
+        <h1>Sequência Recursiva</h1>
+        <div style="width: fit-content; background: white; margin: 0 auto; padding: 15px; height: 80vh;overflow-y: scroll;">
+            <p>a[1] = 2, a[n] = a[n-1]+2n</p>
+            <table id="resultado">
+                    <tr><td>n</td><td>a[n]</td></tr>
+            </table>
+
+            <div id="inputs" style="background: wheat; width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black; max-height: 20vh;">
+                <p id="sequenciaAN"></p>
+                <input type="number" name="" id="numA1" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numSN" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numAN" style="max-width: calc(65vh/3);">
+                <button type="submit" onclick="confirmar()">Confirmar</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="sequenciaRecursiva.js"></script>
     <script src="fogoDOOM.js"></script>
 </body>
 </html>

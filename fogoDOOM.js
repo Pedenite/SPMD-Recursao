@@ -64,7 +64,7 @@ function criarBaseFogo(){
 }
 
 function gerarFogo(){
-    let html = '<table cellpadding = 0 cellspacing = 0>'    //gera uma string html para iniciar uma tabela na div com os pixels do fogo
+    let html = '<table cellpadding = 0 cellspacing = 0 id="tblFogo">'    //gera uma string html para iniciar uma tabela na div com os pixels do fogo
 
     for(let linha = 0; linha < altura; linha++){
         html += '<tr>'
