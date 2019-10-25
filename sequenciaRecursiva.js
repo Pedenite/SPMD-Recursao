@@ -3,7 +3,7 @@ var resultado = document.getElementById("resultado")
 resultado.innerHTML += `<td>1</td><td>2</td>`
 function seqAtual(){
     let txtSeq = document.getElementById("sequenciaAN")
-    txtSeq.innerText = `a[${n}] = a[${n-1}] + 2*${n} = ??? + ??? = ???`
+    txtSeq.innerText = `a[${n}] = a[${n-1}] + 2•${n}`
 }
 function calc(n){
     if(n <= 1){
@@ -12,7 +12,9 @@ function calc(n){
         return (calc(n-1)+(2*n))
     }
 }
-function confirmar(){  
+function confirmar(){
+    const c1 = document.selectElementById("numA1").value;  
+    //c1 = c1-1;
     let an = Number(document.getElementById("numAN").value)
     let an1 = Number(document.getElementById("numA1").value)
     let sn = Number(document.getElementById("numSN").value)
