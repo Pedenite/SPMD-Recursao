@@ -16,8 +16,6 @@ function calc(n){
     }
 }
 function confirmar(){
-    const c1 = document.selectElementById("numA1").value;  
-    //c1 = c1-1;
     let an = Number(document.getElementById("numAN").value)
     let an1 = Number(document.getElementById("numA1").value)
     let sn = Number(document.getElementById("numSN").value)
