@@ -4,6 +4,9 @@ resultado.innerHTML += `<td>1</td><td>2</td>`
 function seqAtual(){
     let txtSeq = document.getElementById("sequenciaAN")
     txtSeq.innerText = `a[${n}] = a[${n-1}] + 2•${n}`
+    document.getElementById("numA1").placeholder = `a[${n-1}]`
+    document.getElementById("numSN").placeholder = `2*${n}`
+    document.getElementById("numAN").placeholder = `a[${n-1}] + 2 * ${n}`
 }
 function calc(n){
     if(n <= 1){
