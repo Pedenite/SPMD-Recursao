@@ -19,7 +19,7 @@ function confirmar(){
     let an = Number(document.getElementById("numAN").value)
     let an1 = Number(document.getElementById("numA1").value)
     let sn = Number(document.getElementById("numSN").value)
-    console.log(an+" "+typeof(an))
+    //console.log(an+" "+typeof(an))
     if(an == calc(n) && an1 == calc(n-1) && sn == 2*n){
         document.getElementById("numAN").value = ""
         document.getElementById("numA1").value = ""
@@ -34,12 +34,12 @@ function confirmar(){
     
 }
 function avancar_10(){
-    var n2 = n+10
+    let n2 = n+10
     for(;n<n2;n++){
         let an = Number(document.getElementById("numAN").value)
         let an1 = Number(document.getElementById("numA1").value)
         let sn = Number(document.getElementById("numSN").value)
-        console.log(an+" "+typeof(an))
+        //console.log(an+" "+typeof(an))
         an = calc(n)
         an1 = calc(n-1)
         sn == 2*n
@@ -47,8 +47,7 @@ function avancar_10(){
         document.getElementById("numA1").value = ""
         document.getElementById("numSN").value = ""
         resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
-        
         document.getElementById("numA1").focus()
-        seqAtual()
     }
+    seqAtual()
 }

@@ -6,6 +6,9 @@ body{
 section{
     height: 100vh;
     text-align: center;
+    overflow: auto;
+    width: fit-content;
+    margin: 0 auto;
 }
 #fogoDoom{
     margin: 0 auto;
