@@ -20,11 +20,13 @@
         </div>
         <div id="inputs" style="width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black; max-height: 20vh;">
             <p id="sequenciaAN"></p>
-            <input type="number" name="" id="numA1" title = "a[n-1]" placeholder = "a[n-1]" style="max-width: calc(65vh/3);">
-            <input type="number" name="" id="numSN" title = "2•n" placeholder = "2•n" style="max-width: calc(65vh/3);">
-            <input type="number" name="" id="numAN" title = "a[n-1] + 2•n" placeholder = "a[n-1] + 2•n" style="max-width: calc(65vh/3);">
-            <button type="submit" onclick="avancar_10()">Avançar 10</button>
-            <button type="submit" onclick="confirmar()">Confirmar</button>
+            <form action="javascript:confirmar()">
+                <input type="number" name="" id="numA1" title = "a[n-1]" placeholder = "a[n-1]" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numSN" title = "2•n" placeholder = "2•n" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numAN" title = "a[n-1] + 2•n" placeholder = "a[n-1] + 2•n" style="max-width: calc(65vh/3);">
+                <button type="button" onclick="avancar_10()">Avançar 10</button>
+                <button type="submit">Confirmar</button>
+            </form>
         </div>
             
         
