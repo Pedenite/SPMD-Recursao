@@ -10,6 +10,7 @@
 <body onload="seqAtual()">
     
     <section>
+        <span style="color:gainsboro">
         <h1>Sequência Recursiva</h1>
         <div>
             <p>a[1] = 2, a[n] = a[n-1] + 2n</p>
@@ -22,14 +23,16 @@
                 <input type="number" name="" id="numA1" title = "a[n-1]" placeholder = "a[n-1]" style="max-width: calc(65vh/3);">
                 <input type="number" name="" id="numSN" title = "2•n" placeholder = "2•n" style="max-width: calc(65vh/3);">
                 <input type="number" name="" id="numAN" title = "a[n-1] + 2•n" placeholder = "a[n-1] + 2•n" style="max-width: calc(65vh/3);">
+                <button type="submit" onclick="avancar_10()">Avançar 10</button>
                 <button type="submit" onclick="confirmar()">Confirmar</button>
             </div>
             
         </div>
+        </span>
     </section>
     
     <section>
-        <h1>Fogo do Doom</h1>
+        <h1 style="color:gainsboro">Fogo do Doom</h1>
         <div id="fogoDoom"></div>
     </section>
 
