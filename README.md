@@ -11,3 +11,4 @@ Ainda em desenvolvimento.
 - [x] Melhorar a interface.
 - [x] Facilitar o uso.
 - [ ] Adicionar mais exercícios.
+- [ ] Adicionar textos explicando o fogo do DOOM (onde é recursivo).
