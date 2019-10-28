@@ -8,6 +8,6 @@ Visando a resolução de exercícios de recursão, recriamos o software em javas
 Ainda em desenvolvimento.
 
 ## Checklist
--[x]melhorar a interface.
--[x]facilitar o uso.
--[ ]adicionar mais exercícios.
+- [x] Melhorar a interface.
+- [x] Facilitar o uso.
+- [ ] Adicionar mais exercícios.
