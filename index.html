@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SPMD-RECURSÃO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
 </head>
 <body onload="seqAtual()">
     
-    <section>
+    <section class="wow fadeInUpBig">
         <span style="color:gainsboro">
         <h1>Sequência Recursiva</h1>
-        <p>a[1] = 2, a[n] = a[n-1] + 2n</p>
+        <p>
+            <select name="" id="">
+                <option value="">a[1] = 2, a[n] = a[n-1] + 2n</option>
+            </select>
+        </p>
         <div style="overflow: auto; height: 50vh;">
             <table id="resultado">
                     <tr><td>n</td><td>a[n]</td></tr>
@@ -33,7 +38,7 @@
         </span>
     </section>
     
-    <section>
+    <section class="wow fadeInUpBig">
         <h1 style="color:rgb(236, 207, 127)">Exemplo de Aplicação de Recursividade</h1>
         <h3 style="color:gainsboro">Fogo do Doom</h3>
         <div id="fogoDoom"></div>
@@ -45,5 +50,9 @@
 
     <script src="sequenciaRecursiva.js"></script>
     <script src="fogoDOOM.js"></script>
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
