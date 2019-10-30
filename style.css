@@ -61,3 +61,10 @@ section *{
     background-color: rgb(173, 172, 255);
     color: rgb(0, 0, 0);
 }
+.select{ 
+    background-color: #0e1449; 
+    color: gainsboro; 
+    border-radius: 12px; 
+    border: 0px solid black; 
+    font-size: 24px; 
+} 
