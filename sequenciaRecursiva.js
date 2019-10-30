@@ -51,10 +51,3 @@ function avancar_10(){
     }
     seqAtual()
 }
-// document.onkeydown = function (e) {
-//     e = e || window.event;
-//     switch (e.which || e.keyCode) {
-//           case 13 : confirmar()
-//               break;
-//     }
-// }
