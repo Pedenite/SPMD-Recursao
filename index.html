@@ -14,9 +14,11 @@
         <span style="color:gainsboro">
         <h1>Sequência Recursiva</h1>
         <p>
-            <select class="select" name="" id="" onchange="avancar_10()">
-                <option value="">a[1] = 2, a[n] = a[n-1] + 2n</option>
-                <option value="">a[1] = 2, a[n] = a[n-1] + 2n</option>
+            <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
+                <option>Selecione uma função...</option>
+                <option value="1">a[1] = 2, a[n] = a[n-1] + 2n</option>
+                <option value="2">a[1] = 1, a[n] = a[n-1] + (2n-1)</option>
+                <option value="3">a[1] = 5, a[n] = a[n-1] + (n+4)</option>
             </select>
         </p>
         <div style="overflow: auto; height: 50vh;">
@@ -27,9 +29,10 @@
         <div id="inputs" style="width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black; max-height: 20vh;">
             <p id="sequenciaAN"></p>
             <form action="javascript:confirmar()">
-                <input type="number" name="" id="numA1" title = "a[n-1]" placeholder = "a[n-1]" style="max-width: calc(65vh/3);">
-                <input type="number" name="" id="numSN" title = "2•n" placeholder = "2•n" style="max-width: calc(65vh/3);">
-                <input type="number" name="" id="numAN" title = "a[n-1] + 2•n" placeholder = "a[n-1] + 2•n" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numA1" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numSN" style="max-width: calc(65vh/3);">
+                <input type="number" name="" id="numAN" style="max-width: calc(65vh/3);">
+                <a class="button" type="button" href="#fogoDoom">Criar sua função</a>
                 <button class="button" type="button" onclick="avancar_10()">Avançar 10</button>
                 <button class="button" type="submit">Confirmar</button>
             </form>
