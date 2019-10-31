@@ -6,13 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SPMD-RECURSÃO</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animate.css">
 </head>
 <body onload="seqAtual()">
-    
-    <section 'class="wow fadeInLeftBig"'>
+    <a class="a" type="button" href="index.html">Voltar</a>
+    <section style="color:gainsboro">
+        <h1>Criar Sequência Recursiva</h1>
+        <p>Informe a quantidade de elementos iniciais com valor determinado:</p>
+        <form action="javascript:qtdVal()">
+            <input type="number" name="" id="valInit" style="max-width: calc(65vh/3);">
+            <button class="button" type="submit">Confirmar</button>
+        </form>
+        <br>
+        <p>Informe os valores dos elementos conforme indicado:</p>
+        <form action="javascript:valoresInit()">
+            <input type="number" name="" id="valorDeA" style="max-width: calc(65vh/3);">
+            <button class="button" type="submit">Confirmar</button>
+        </form>
+    </section> 
+
+    <section>
         <span style="color:gainsboro">
-        <h1>Sequências Recursivas</h1>
         <p>
             <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
                 <option>Selecione uma função...</option>
@@ -36,27 +49,13 @@
                 <button class="button" type="button" onclick="avancar_10()">Avançar 10</button>
                 <button class="button" type="submit">Confirmar</button>
             </form>
-        </div>
-        <a class="a" type="button" href="index2.html">Criar sua função</a>    
+        </div>  
         
         </span>
     </section>
-    
-    <section class="wow fadeInLeftBig">
-        <h1 style="color:rgb(236, 207, 127)">Exemplo de Aplicação de Recursividade</h1>
-        <h3 style="color:gainsboro">Fogo do Doom</h3>
-        <div id="fogoDoom"></div>
-        <p style="color:gainsboro">
-            O famoso algoritmo para javascript, "Fogo do Doom", trata-se de um algoritmo que,
-             apesar de não apresentar recursão em seu código, tem no funcionamento, uma lógica recursiva. Tal que...
-        </p>
-    </section>
 
     <script src="sequenciaRecursiva.js"></script>
-    <script src="fogoDOOM.js"></script>
-    <script src="wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+    <script src="criarSequencia.js"></script>
+
 </body>
 </html>
