@@ -10,6 +10,7 @@ Ainda em desenvolvimento.
 ## Checklist
 - [x] Melhorar a interface.
 - [x] Facilitar o uso.
-- [ ] Adicionar mais exercícios.
+- [x] Adicionar mais exercícios.
 - [ ] Adicionar textos explicando o fogo do DOOM (onde é recursivo).
 - [ ] Adicionar uma interface para o usuário adicionar suas proprias funções recursivas.
+- [ ] Adicionar texto sobre recursão.
