@@ -26,3 +26,11 @@ function addValoresInit(){
     tabela.innerHTML += html
     document.getElementById("tblFuncao").classList.remove("sumir")
 }
+function calc(n){
+    for(let i = 1;i <= qtd; i++){
+        if(n = i){
+            return Number(document.getElementById(`valorDeA${i}`).value) //valores iniciais para a parada da recurção
+        }
+    }
+    return (calc(n-1)+(2*n))//função
+}
