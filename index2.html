@@ -7,13 +7,13 @@
     <title>SPMD-RECURSÃO</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="seqAtual()">
+<body onload="seqAtual()">    
     <a class="a" type="button" href="index.html">Home</a>
-    <section style="color:gainsboro">
+    <section style="color:gainsboro; height: min-content;">
         <h1>Criar Sequência Recursiva</h1>
         <p id="infoQtd">Informe a quantidade de elementos iniciais com valor determinado:</p>
         <form action="javascript:valoresInit()">
-            <input type="number" name=""id="valInit" style="max-width: calc(65vh/3);">
+            <input type="number" name="" id="valInit" style="max-width: calc(65vh/3);">
             <button class="button" id="buttonAN" type="submit">Confirmar</button>
         </form>
         <div id="valoresIniciais">
@@ -21,7 +21,7 @@
         </div>
     </section> 
 
-    <section>
+    <section id="tblFuncao" class="sumir" style="height: min-content;">
         <span style="color:gainsboro">
         <p>
             <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
@@ -50,9 +50,7 @@
         
         </span>
     </section>
-
     <script src="sequenciaRecursiva.js"></script>
     <script src="criarSequencia.js"></script>
-
 </body>
 </html>

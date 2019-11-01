@@ -84,5 +84,5 @@ section *{
     color: rgb(0, 0, 0);
 }
 .sumir{
-    display: none;
+    display: none !important;
 }

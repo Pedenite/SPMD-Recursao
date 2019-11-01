@@ -4,12 +4,25 @@ function valoresInit(){
     document.getElementById("infoQtd").className = "sumir"
     document.getElementById("buttonAN").className = "sumir"
     document.getElementById("valInit").className = "sumir"
-    document.getElementById("valoresIniciais").innerHTML += `<p>Informe os valores dos elementos conforme indicado:</p><form action="javascript:addValoresInit()">`
-    for(let i = 0;i < qtd; i++){
-        document.getElementById("valoresIniciais").innerHTML += `<input type="number" placeholder = "a[${i+1}]" name="" id="valorDeA" style="max-width: calc(65vh/3);margin-top: 15px;"><br>`
+    let html
+    html = `<p id="infoAddValoresInit">Informe os valores dos elementos conforme indicado:</p><form action="javascript:addValoresInit()">`
+    for(let i = 1;i <= qtd; i++){
+        html += `<input type="number" placeholder = "a[${i}]" name="" id="valorDeA${i}" style="max-width: calc(65vh/3);margin:10px auto 10px;display:block;">`
     }
-    document.getElementById("valoresIniciais").innerHTML += `<button class="button" type="submit">Confirmar</button></form>`
+    html += `<button id="addValoresInitBtn"class="button" type="submit">Confirmar</button></form>`
+    document.getElementById("valoresIniciais").innerHTML = html
 }
 function addValoresInit(){
-    alert("8====D")
+    let tabela = document.getElementById("resultado")
+    document.getElementById("addValoresInitBtn").className = "sumir"
+    document.getElementById("infoAddValoresInit").className = "sumir"
+    let html = ""
+    for(let i = 1;i <= qtd; i++){
+        let n = Number(document.getElementById(`valorDeA${i}`).value)
+        html += `<tr><td>${i}</td><td>${n}</td></tr>`
+        document.getElementById(`valorDeA${i}`).className = "sumir"
+    }
+    console.log(html)
+    tabela.innerHTML += html
+    document.getElementById("tblFuncao").classList.remove("sumir")
 }
