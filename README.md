@@ -14,4 +14,4 @@ Ainda em desenvolvimento.
 - [ ] Adicionar textos explicando o fogo do DOOM (onde é recursivo).
 - [ ] Adicionar uma interface para possibilitar ao usuário, criar suas proprias funções recursivas.
 - [ ] Adicionar texto sobre recursão.
-- [ ] Melhorar desempenho no pc do vocalista fazendo o fogo do DOOM iniciar apenas quando a animação for executada (ou algo assim).
+- [x] Melhorar desempenho no pc do vocalista fazendo o fogo do DOOM iniciar apenas quando a animação for executada (ou algo assim).
