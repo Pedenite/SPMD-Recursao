@@ -83,3 +83,6 @@ section *{
     background-color: rgb(173, 172, 255);
     color: rgb(0, 0, 0);
 }
+.sumir{
+    display: none;
+}
