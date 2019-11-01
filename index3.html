@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SPMD-RECURSÃO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="animation/animate.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <a href="#main-menu" class="nav" id="main-menu-toggle" aria-label="Open main menu">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </a>
+
+    <header>
+            <h1 class="logo"></h1>
+            
+            <nav id="main-menu" class="main-menu" aria-label="Main menu">
+              <a href="#main-menu-toggle"
+                 id="main-menu-close"
+                 class="menu-close"
+                 aria-label="Close main menu">
+                <span class="sr-only">Close main menu</span>
+                <span class="fa fa-close" aria-hidden="true"></span>
+              </a>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Criar Função</a></li>
+                <li><a href="#fogoDoom">Aplicações</a></li>
+              </ul>
+            </nav>
+            <a href="#main-menu-toggle"
+               class="backdrop"
+               tabindex="-1"
+               aria-hidden="true" hidden></a>
+    </header>
+    
+    <section class="">
+        <h1 style="color:rgb(236, 207, 127)">Exemplo de Aplicação de Recursividade</h1>
+        <h3 style="color:gainsboro">Fogo do Doom</h3>
+        <div id="fogoDoom"></div>
+        <p style="color:gainsboro">
+            O famoso algoritmo para javascript, "Fogo do Doom", trata-se de um algoritmo que,
+             apesar de não apresentar recursão em seu código, tem no funcionamento, uma lógica recursiva. Tal que...
+        </p>
+    </section>
+
+    <script src="fogoDOOM.js"></script>
+    <script src="animation/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    </body>
+</html>
