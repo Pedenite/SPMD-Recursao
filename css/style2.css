@@ -71,7 +71,7 @@
   .main-menu a:hover,
   .main-menu a:focus {
     background: #333;
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   .main-menu .menu-close {
