@@ -90,7 +90,7 @@ function avancar_10(){
         document.getElementById("numA1").value = ""
         document.getElementById("numSN").value = ""
         resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
-        document.getElementById("numA1").focus()
     }
+    document.getElementById("numA1").focus()
     seqAtual()
 }

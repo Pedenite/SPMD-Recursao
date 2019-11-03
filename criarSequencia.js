@@ -1,4 +1,5 @@
 var qtd = Number(document.getElementById("valInit").value)
+var n = qtd + 1
 function valoresInit(){
     qtd = Number(document.getElementById("valInit").value)
     document.getElementById("infoQtd").className = "sumir"
@@ -23,15 +24,55 @@ function addValoresInit(){
         document.getElementById(`valorDeA${i}`).className = "sumir"
     }
     tabela.innerHTML += html
-    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p><form action = "javascript:a()"><input type="text" placeholder = "Digite sua função..." name="" id= "criarFunc" style= "max-width: calc(65vh/3);"><button class="button" id="buttonNewFunc" type="submit">Confirmar</button></form>`
+    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p><form action = "javascript:definirFunc()"><input type="text" placeholder = "Digite sua função..." name="" id= "criarFunc" style= "max-width: calc(65vh/3);"><button class="button" id="buttonNewFunc" type="submit">Confirmar</button></form>`
     
+}
+function definirFunc(){
+    document.getElementById("funcaoCriadaDiv").classList.add("sumir")
+    document.getElementById("tblFuncao").classList.remove("sumir")
+    document.getElementById("funcaoCriadaParagrafo").innerText = String(document.getElementById("criarFunc").value)
 }
 function a(n){
     let func =  String(document.getElementById("criarFunc").value)
-    for(let i = 1;i <= qtd; i++){
+    for(let i = 1;i < qtd; i++){
         if(n = i){
             return Number(document.getElementById(`valorDeA${i}`).value) //valores iniciais para a parada da recurção
         }
     }
-    return (eval(func))//função
+    return eval(func)//função
+}
+function avancar_10C(){
+    let n2 = n+10
+    for(;n<n2;n++){
+        let an = Number(document.getElementById("numAN").value)
+        let an1 = Number(document.getElementById("numA1").value)
+        let sn = Number(document.getElementById("numSN").value)
+        an = a(n)
+        an1 = a(n-1)
+        sn == an-an1
+        document.getElementById("numAN").value = ""
+        document.getElementById("numA1").value = ""
+        document.getElementById("numSN").value = ""
+        resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
+    }
+    document.getElementById("numA1").focus()
+    // seqAtual()
+}
+function confirmarC(){
+    console.log("teste")
+    let an = Number(document.getElementById("numAN").value)
+    let an1 = Number(document.getElementById("numA1").value)
+    let sn = Number(document.getElementById("numSN").value)
+    if(an == a(n) && an1 == a(n-1) && sn == an-an1){
+        document.getElementById("numAN").value = ""
+        document.getElementById("numA1").value = ""
+        document.getElementById("numSN").value = ""
+        resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
+        n++
+        document.getElementById("numA1").focus()
+        //seqAtual()
+    }else{
+        window.alert(`Errado! a[${n}] = ${a(n)} e a[${n-1}] = ${a(n-1)}`)
+    }
+    
 }
