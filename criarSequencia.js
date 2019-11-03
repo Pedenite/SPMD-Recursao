@@ -35,3 +35,10 @@ function calc(n){
     }
     return (calc(n-1)+(2*n))//função
 }
+function newFunc(){
+    let func =  document.getElementById("criarFunc").value
+    let html = "<script>"
+    html += func
+    html += "</script>"
+    document.body.innerHTML += html
+}
