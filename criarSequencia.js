@@ -1,7 +1,9 @@
 var qtd = Number(document.getElementById("valInit").value)
-var n = qtd + 1
+var n
+var func
 function valoresInit(){
     qtd = Number(document.getElementById("valInit").value)
+    n = qtd + 1
     document.getElementById("infoQtd").className = "sumir"
     document.getElementById("buttonAN").className = "sumir"
     document.getElementById("valInit").className = "sumir"
@@ -33,9 +35,9 @@ function definirFunc(){
     document.getElementById("funcaoCriadaParagrafo").innerText = String(document.getElementById("criarFunc").value)
 }
 function a(n){
-    let func =  String(document.getElementById("criarFunc").value)
-    for(let i = 1;i < qtd; i++){
-        if(n = i){
+    func =  String(document.getElementById("criarFunc").value)
+    for(let i = 1;i <= qtd; i++){
+        if(n == i){
             return Number(document.getElementById(`valorDeA${i}`).value) //valores iniciais para a parada da recurção
         }
     }
