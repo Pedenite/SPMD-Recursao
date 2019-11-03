@@ -22,7 +22,6 @@ function addValoresInit(){
         html += `<tr><td>${i}</td><td>${n}</td></tr>`
         document.getElementById(`valorDeA${i}`).className = "sumir"
     }
-    console.log(html)
     tabela.innerHTML += html
     document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p><form action = "javascript:newFunc()"><input type="text" placeholder = "Digite sua função..." name="" id= "criarFunc" style= "max-width: calc(65vh/3);"><button class="button" id="buttonNewFunc" type="submit">Confirmar</button></form>`
     
@@ -36,10 +35,6 @@ function calc(n){
     return (calc(n-1)+(2*n))//função
 }
 function newFunc(){
-    let func =  document.getElementById("criarFunc").value
-    let html = "<script>"
-    console.log(`${func}`)
-    html += func
-    html += "</script>"
-    document.body.innerHTML += html
+    let func =  String(document.getElementById("criarFunc").value)
+    eval(func)
 }

@@ -64,7 +64,6 @@ function confirmar(){
     let an = Number(document.getElementById("numAN").value)
     let an1 = Number(document.getElementById("numA1").value)
     let sn = Number(document.getElementById("numSN").value)
-    //console.log(an+" "+typeof(an))
     if(an == calc(n) && an1 == calc(n-1) && sn == an-an1){
         document.getElementById("numAN").value = ""
         document.getElementById("numA1").value = ""
@@ -84,7 +83,6 @@ function avancar_10(){
         let an = Number(document.getElementById("numAN").value)
         let an1 = Number(document.getElementById("numA1").value)
         let sn = Number(document.getElementById("numSN").value)
-        //console.log(an+" "+typeof(an))
         an = calc(n)
         an1 = calc(n-1)
         sn == an-an1
