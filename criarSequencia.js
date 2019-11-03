@@ -24,7 +24,7 @@ function addValoresInit(){
     }
     console.log(html)
     tabela.innerHTML += html
-    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p>`
+    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p><form action = "javascript:newFunc()"><input type="text" placeholder = "Digite sua função..." name="" id= "criarFunc" style= "max-width: calc(65vh/3);"><button class="button" id="buttonNewFunc" type="submit">Confirmar</button></form>`
     
 }
 function calc(n){
