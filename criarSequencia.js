@@ -23,18 +23,15 @@ function addValoresInit(){
         document.getElementById(`valorDeA${i}`).className = "sumir"
     }
     tabela.innerHTML += html
-    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p><form action = "javascript:newFunc()"><input type="text" placeholder = "Digite sua função..." name="" id= "criarFunc" style= "max-width: calc(65vh/3);"><button class="button" id="buttonNewFunc" type="submit">Confirmar</button></form>`
+    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p><form action = "javascript:a()"><input type="text" placeholder = "Digite sua função..." name="" id= "criarFunc" style= "max-width: calc(65vh/3);"><button class="button" id="buttonNewFunc" type="submit">Confirmar</button></form>`
     
 }
-function calc(n){
+function a(n){
+    let func =  String(document.getElementById("criarFunc").value)
     for(let i = 1;i <= qtd; i++){
         if(n = i){
             return Number(document.getElementById(`valorDeA${i}`).value) //valores iniciais para a parada da recurção
         }
     }
-    return (calc(n-1)+(2*n))//função
-}
-function newFunc(){
-    let func =  String(document.getElementById("criarFunc").value)
-    eval(func)
+    return (eval(func))//função
 }
