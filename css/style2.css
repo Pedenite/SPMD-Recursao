@@ -170,3 +170,7 @@
     position: fixed;
   }
 }
+
+nav{
+  overflow: hidden !important;
+}
