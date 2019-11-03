@@ -14,6 +14,7 @@ function valoresInit(){
     }
     html += `<button id="addValoresInitBtn"class="button" type="submit">Confirmar</button></form>`
     document.getElementById("valoresIniciais").innerHTML = html
+    document.getElementById("numAN").placeholder = `a(${n})`
 }
 function addValoresInit(){
     let tabela = document.getElementById("resultado")
@@ -47,34 +48,23 @@ function avancar_10C(){
     let n2 = n+10
     for(;n<n2;n++){
         let an = Number(document.getElementById("numAN").value)
-        let an1 = Number(document.getElementById("numA1").value)
-        let sn = Number(document.getElementById("numSN").value)
         an = a(n)
-        an1 = a(n-1)
-        sn == an-an1
         document.getElementById("numAN").value = ""
-        document.getElementById("numA1").value = ""
-        document.getElementById("numSN").value = ""
         resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
     }
-    document.getElementById("numA1").focus()
-    // seqAtual()
+    document.getElementById("numAN").focus()
+    document.getElementById("numAN").placeholder = `a(${n})`
 }
 function confirmarC(){
-    console.log("teste")
     let an = Number(document.getElementById("numAN").value)
-    let an1 = Number(document.getElementById("numA1").value)
-    let sn = Number(document.getElementById("numSN").value)
-    if(an == a(n) && an1 == a(n-1) && sn == an-an1){
+    if(an == a(n)){
         document.getElementById("numAN").value = ""
-        document.getElementById("numA1").value = ""
-        document.getElementById("numSN").value = ""
         resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
         n++
-        document.getElementById("numA1").focus()
-        //seqAtual()
+        document.getElementById("numAN").placeholder = `a(${n})`
+        document.getElementById("numAN").focus()
     }else{
-        window.alert(`Errado! a[${n}] = ${a(n)} e a[${n-1}] = ${a(n-1)}`)
+        window.alert(`Errado! a[${n}] = ${a(n)}`)
     }
     
 }
