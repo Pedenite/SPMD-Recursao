@@ -44,21 +44,13 @@
             <input type="number" name="" id="valInit" style="max-width: calc(65vh/3);">
             <button class="button" id="buttonAN" type="submit">Confirmar</button>
         </form>
-        <div id="valoresIniciais">
-
-        </div>
+        <div id="valoresIniciais"></div>
+        <div id="funcaoCriadaDiv"></div>
     </section> 
 
     <section id="tblFuncao" class="sumir" style="height: min-content;">
         <span style="color:gainsboro">
-        <p>
-            <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
-                <option>Selecione uma função...</option>
-                <option value="1">a[1] = 2, a[n] = a[n-1] + 2n</option>
-                <option value="2">a[1] = 1, a[n] = a[n-1] + (2n-1)</option>
-                <option value="3">a[1] = 5, a[n] = a[n-1] + (n+4)</option>
-            </select>
-        </p>
+        <p id="funcaoCriadaParagrafo"></p>
         <div style="overflow: auto; height: 50vh;">
             <table id="resultado">
                     <tr><td>n</td><td>a[n]</td></tr>

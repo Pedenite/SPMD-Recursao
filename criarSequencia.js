@@ -24,7 +24,8 @@ function addValoresInit(){
     }
     console.log(html)
     tabela.innerHTML += html
-    document.getElementById("tblFuncao").classList.remove("sumir")
+    document.getElementById("funcaoCriadaDiv").innerHTML = `<p>a(n)=</p>`
+    
 }
 function calc(n){
     for(let i = 1;i <= qtd; i++){
