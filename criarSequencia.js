@@ -38,6 +38,7 @@ function calc(n){
 function newFunc(){
     let func =  document.getElementById("criarFunc").value
     let html = "<script>"
+    console.log(`${func}`)
     html += func
     html += "</script>"
     document.body.innerHTML += html
