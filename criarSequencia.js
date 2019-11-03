@@ -33,7 +33,7 @@ function addValoresInit(){
 function definirFunc(){
     document.getElementById("funcaoCriadaDiv").classList.add("sumir")
     document.getElementById("tblFuncao").classList.remove("sumir")
-    document.getElementById("funcaoCriadaParagrafo").innerText = String(document.getElementById("criarFunc").value)
+    document.getElementById("funcaoCriadaParagrafo").innerText = "a(n) = "+String(document.getElementById("criarFunc").value)
 }
 function a(n){
     func =  String(document.getElementById("criarFunc").value)
