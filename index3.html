@@ -47,7 +47,13 @@
         <div id="fogoDoom"></div>
         <p style="color:gainsboro">
             O famoso algoritmo para javascript, "Fogo do Doom", trata-se de um algoritmo que,
-             apesar de não apresentar recursão em seu código, tem no funcionamento, uma lógica recursiva. Tal que...
+             apesar de não apresentar recursão em seu código, tem no funcionamento, uma lógica recursiva. 
+             Tal que, ao iniciar, todos os pixels da base começam com valor 36, que é o mais forte. 
+             Em seguida, o pixel de cima pega o valor do pixel de baixo ou das diagonais inferiores subtraído de um valor randômico de 0 a 3
+             para da uma sensação de movimento do fogo e os pixel são atualizados em um tempo definido.
+             Por fim, os pixels mais altos seguem a mesma lógica, sendo sempre definidos pelos de baixo que são definidos pelos pixels abaixo dele.
+             Logo, assim como na recursividade, o n-ésimo pixel (termo) é definido pelo anterior.
+
         </p>
     </section>
 
