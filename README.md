@@ -5,13 +5,11 @@ Software inspirado em "Recursive Sequences", disponível no site http://webspace
 
 Visando a resolução de exercícios de recursão, recriamos o software em javascript, html e css adicionando novas funções e exercícios. Também adicionamos a funcionalidade de criar uma nova função recursiva para possibilitar a resolução de exercícios com sequências personalizadas.
 
-Ainda em desenvolvimento.
-
 ## Checklist
 - [x] Melhorar a interface.
 - [x] Facilitar o uso.
 - [x] Adicionar mais exercícios.
-- [ ] Adicionar textos explicando o fogo do DOOM (onde é recursivo).
-- [ ] Adicionar uma interface para possibilitar ao usuário, criar suas proprias funções recursivas.
+- [x] Adicionar textos explicando o fogo do DOOM (onde é recursivo).
+- [x] Adicionar uma interface para possibilitar ao usuário, criar suas proprias funções recursivas.
 - [ ] Adicionar texto sobre recursão.
 - [x] Melhorar desempenho no pc do vocalista fazendo o fogo do DOOM iniciar apenas quando a animação for executada (ou algo assim).
