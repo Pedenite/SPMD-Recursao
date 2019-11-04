@@ -87,6 +87,15 @@ section *{
 .sumir{
     display: none !important;
 }
+.p{
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: left;
+}
+.doom{
+    overflow-y: hidden;
+}
 /*Menu*/
 .nav div{
     height: 4px;
