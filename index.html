@@ -46,10 +46,20 @@
     <h1 class="doom" style="font-size: 60px;">Recursão</h1>
     <img src="imagens/1.jpeg" alt="Recursion" class="image">
     <p class="p">
-        Recursividade é uma técnica da computação que permite ao programador criar uma função 
-        que chama ela mesma. Este recurso pode facilitar bastante a solução de diversos tipos 
-        de problemas, principalmente quando pode ser resolvido ao dividí-lo em problemas menores
-        que possam utilizar o mesmo algoritmo.
+        É um método de resolução de problemas que envolve quebrar um problema em subproblemas menores e menores
+         até chegar a um problema pequeno o suficiente para que ele possa ser resolvido trivialmente. 
+         Em termos gerais, a recursão pode ser considerada como um processo de repetição de uma rotina. Logo, 
+         pode ser definida como uma rotina (função) que chama a si mesma.
+    </p>
+    <p class="p">
+        Bem, se a rotina chama a si mesma inúmeras vezes, é preciso então tomar muito cuidado com o LOOP. 
+        Para que um LOOP não ocorra é necessário definir uma condição de terminação de forma correta.
+        A função recursiva é dividida em duas partes: caso trivial e caso geral.<br>
+        ♦ Caso trivial:  geralmente é o caso mais básico, fácil de resolver e retorna um resultado.<br>
+        ♦ Caso geral: esse novo problema é parecido com o original, a rotina chama uma nova cópia de si mesma para trabalhar no problema menor.<br>
+        Exemplo:n!<br>
+        CT(problema simples):  0! = 1 e 1! = 1<br>
+        CG(problema complexo): n!=n*(n-1)<br>
     </p>
     <p class="p">
         Quando é utilizada uma sequência recursiva, não é possível saber o valor do n-ésimo termo
@@ -71,6 +81,18 @@
         executada novamente para n-1 até chegar em n = 0, que vai finalizar a função multiplicando todos
         os resultados das chamadas dela, assim calculando o fatorial do número.
     </p>   
+    <p class="p">
+        Abaixo temos outro exemplo de recursão em pseudo-código para divisão:
+    </p>
+    <code class="code">Função divisaoRec(inteiro num, inteiro den) retorna Inteiro</code><br>
+    <code class="code">Inicio</code><br>
+        <code class="code1">Se (num < den)</code><br>
+        <code class="code1">Então</code><br>
+            <code class="code2">Função_Retorna(0)</code><br>
+        <code class="code1">Senão</code><br>
+            <code class="code2">Função_Retorna(divisaoRec(num-den, den) + 1)</code><br>
+        <code class="code1">Fim_Se</code><br>
+    <code class="code">Fim</code><br>
     
     <h2 class="doom">Tutorial</h2>
     <p class="p">
