@@ -97,6 +97,21 @@ section *{
     overflow-y: hidden;
     text-align: center;
 }
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.3;
+}
+.code{
+    margin-left: 250px;
+}
+.code1{
+    margin-left: 300px;
+}
+.code2{
+    margin-left: 350px;
+}
 /*Menu*/
 .nav div{
     height: 4px;

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body onload="seqAtual()">
+<body onload="seqAtual()" style="color:gainsboro">
 
     <a href="#main-menu" class="nav" id="main-menu-toggle" aria-label="Open main menu">
         <div class="one"></div>
@@ -31,9 +31,10 @@
                 <i class="material-icons">clear</i>
               </a>
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="index2.html">Criar Função</a></li>
                 <li><a href="index3.html">Aplicações</a></li>
+                <li><a href="index4.html">Exercícios</a></li>
               </ul>
             </nav>
             <a href="#main-menu-toggle"
@@ -42,39 +43,46 @@
                aria-hidden="true" hidden></a>
     </header>
 
-    <section class="">
-        <span style="color:gainsboro">
-        <h1>Sequências Recursivas</h1>
-        <p>
-            <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
-                <option>Selecione uma função...</option>
-                <option value="1">a[1] = 2, a[n] = a[n-1] + 2n</option>
-                <option value="2">a[1] = 1, a[n] = a[n-1] + (2n-1)</option>
-                <option value="3">a[1] = 5, a[n] = a[n-1] + (n+4)</option>
-            </select>
-        </p>
-        <div style="overflow: auto; height: 50vh;">
-            <table id="resultado">
-                    <tr><td>n</td><td>a[n]</td></tr>
-            </table>
-        </div>
-        <div id="inputs" style="width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black; max-height: 20vh;">
-            <p id="sequenciaAN"></p>
-            <form action="javascript:confirmar()">
-                <input type="number" name="" id="numA1" style="max-width: calc(65vh/3);"> 
-                <input type="number" name="" id="numSN" style="max-width: calc(65vh/3);"> 
-                <input type="number" name="" id="numAN" style="max-width: calc(65vh/3);">
-                
-                <button class="button" type="button" onclick="avancar_10()">Avançar 10</button>
-                <button class="button" type="submit">Confirmar</button>
-            </form>
-        </div>
-        <a class="a" type="button" href="index2.html">Criar sua função</a>    
-        
-        </span>
-    </section>
+    <h1 class="doom" style="font-size: 60px;">Recursão</h1>
+    <img src="imagens/1.jpeg" alt="Recursion" class="image">
+    <p class="p">
+        Recursividade é uma técnica da computação que permite ao programador criar uma função 
+        que chama ela mesma. Este recurso pode facilitar bastante a solução de diversos tipos 
+        de problemas, principalmente quando pode ser resolvido ao dividí-lo em problemas menores
+        que possam utilizar o mesmo algoritmo.
+    </p>
+    <p class="p">
+        Quando é utilizada uma sequência recursiva, não é possível saber o valor do n-ésimo termo
+        sem ter o valor do termo a(n-1), por isso é necessário que a função chame ela mesma.<br>
+        Abaixo temos um exemplo prático em linguagem C de uma função fatorial recursiva:
+    </p>
+    <code class="code">int fat(int n){</code><br>
+        <code class="code1">if(n == 0){</code><br>
+            <code class="code2">return 1;</code><br>
+        <code class="code1">} else {</code><br>
+            <code class="code2">return n*fat(n-1);</code><br>
+        <code class="code1">}</code><br>
+    <code class="code">}</code><br>
 
-    <script src="sequenciaRecursiva.js"></script>
+    <p class="p">
+        Como podemos ver, a função fat(n) descrita vai receber um valor indicado por n e vai verificar se
+        este valor é 0 para assim, retornar o valor 1. Caso o valor não seja 0, a função vai retornar
+        n multiplicado pela própria função fat, porém com n-1 como argumento. Desta foma, a função será 
+        executada novamente para n-1 até chegar em n = 0, que vai finalizar a função multiplicando todos
+        os resultados das chamadas dela, assim calculando o fatorial do número.
+    </p>   
+    
+    <h2 class="doom">Tutorial</h2>
+    <p class="p">
+        Neste software, é possível criar a sua própria sequência recursiva para se ter um auxílio para a 
+        resolução de exercícios de encontrar o n-ésimo termo da sequência. Também temos exercícios pré-definidos
+        para serem resolvidos passo a passo.
+    </p>
+    <p class="p">
+        Para acessar esses recursos, basta abrir o menu no canto superior esquerdo da página e selecionar a
+        opção desejada.
+    </p>
+
     <script src="animation/wow.min.js"></script>
     <script>
         new WOW().init();

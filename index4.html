@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/style2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onload="seqAtual()">
+
     <a href="#main-menu" class="nav" id="main-menu-toggle" aria-label="Open main menu">
         <div class="one"></div>
         <div class="two"></div>
@@ -41,24 +42,40 @@
                tabindex="-1"
                aria-hidden="true" hidden></a>
     </header>
-    
-    
-        <h1 style="color:rgb(236, 207, 127)" class="doom">Exemplo de Aplicação de Recursividade</h1>
-        <h2 style="color:gainsboro" class="doom">Fogo do Doom</h2>
-        <div id="fogoDoom"></div>
-        <p style="color:gainsboro" class="p">
-            O famoso algoritmo para javascript, "Fogo do Doom", trata-se de um algoritmo que,
-             apesar de não apresentar recursão em seu código, tem no funcionamento, uma lógica recursiva. 
-             Tal que, ao iniciar, todos os pixels da base começam com valor 36, que é o mais forte. 
-             Em seguida, o pixel de cima pega o valor do pixel de baixo ou das diagonais inferiores subtraído de um valor randômico de 0 a 3
-             para da uma sensação de movimento do fogo e os pixel são atualizados em um tempo definido.
-             Por fim, os pixels mais altos seguem a mesma lógica, sendo sempre definidos pelos de baixo que são definidos pelos pixels abaixo dele.
-             Logo, assim como na recursividade, o n-ésimo pixel (termo) é definido pelo anterior.
 
+    <section class="">
+        <span style="color:gainsboro">
+        <h1>Sequências Recursivas</h1>
+        <p>
+            <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
+                <option>Selecione uma função...</option>
+                <option value="1">a[1] = 2, a[n] = a[n-1] + 2n</option>
+                <option value="2">a[1] = 1, a[n] = a[n-1] + (2n-1)</option>
+                <option value="3">a[1] = 5, a[n] = a[n-1] + (n+4)</option>
+            </select>
         </p>
+        <div style="overflow: auto; height: 50vh;">
+            <table id="resultado">
+                    <tr><td>n</td><td>a[n]</td></tr>
+            </table>
+        </div>
+        <div id="inputs" style="width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black; max-height: 20vh;">
+            <p id="sequenciaAN"></p>
+            <form action="javascript:confirmar()">
+                <input type="number" name="" id="numA1" style="max-width: calc(65vh/3);"> 
+                <input type="number" name="" id="numSN" style="max-width: calc(65vh/3);"> 
+                <input type="number" name="" id="numAN" style="max-width: calc(65vh/3);">
+                
+                <button class="button" type="button" onclick="avancar_10()">Avançar 10</button>
+                <button class="button" type="submit">Confirmar</button>
+            </form>
+        </div>
+        <!--a class="a" type="button" href="index2.html">Criar sua função</a-->    
+        
+        </span>
+    </section>
 
-
-    <script src="fogoDOOM.js"></script>
+    <script src="sequenciaRecursiva.js"></script>
     <script src="animation/wow.min.js"></script>
     <script>
         new WOW().init();
