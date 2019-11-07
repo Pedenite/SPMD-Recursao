@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="animation/animate.css">
     <link rel="stylesheet" href="css/style2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        #funcao:focus {
+            outline: none;
+        }
+
+        #funcao:hover {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body onload="seqAtual()">
 
@@ -66,7 +76,7 @@
                 <input type="number" name="" id="numSN" style="max-width: calc(65vh/3);"> 
                 <input type="number" name="" id="numAN" style="max-width: calc(65vh/3);">
                 
-                <button class="button" type="button" onclick="avancar_10()">Avançar 10</button>
+                <button class="button" id="btn-avancar10" type="button" onclick="avancar_10(this)">Avançar 10</button>
                 <button class="button" type="submit">Confirmar</button>
             </form>
         </div>

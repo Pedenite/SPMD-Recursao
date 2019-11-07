@@ -15,6 +15,7 @@ function iniciarFunc(){
     }
     n = 2
     seqAtual()
+    document.getElementById("btn-avancar10").style.display = ''
 }
 function seqAtual(){
     let txtSeq = document.getElementById("sequenciaAN")
@@ -77,7 +78,7 @@ function confirmar(){
     }
     
 }
-function avancar_10(){
+function avancar_10(element){
     let n2 = n+10
     for(;n<n2;n++){
         let an = Number(document.getElementById("numAN").value)
@@ -90,6 +91,7 @@ function avancar_10(){
         document.getElementById("numA1").value = ""
         document.getElementById("numSN").value = ""
         resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
+        element.style.display = "none"
     }
     document.getElementById("numA1").focus()
     seqAtual()

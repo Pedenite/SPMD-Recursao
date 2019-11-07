@@ -44,7 +44,7 @@ function a(n){
     }
     return eval(func)//função
 }
-function avancar_10C(){
+function avancar_10C(element){
     let n2 = n+10
     for(;n<n2;n++){
         let an = Number(document.getElementById("numAN").value)
@@ -54,6 +54,7 @@ function avancar_10C(){
     }
     document.getElementById("numAN").focus()
     document.getElementById("numAN").placeholder = `a(${n})`
+    element.className = "sumir"
 }
 function confirmarC(){
     let an = Number(document.getElementById("numAN").value)
