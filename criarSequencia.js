@@ -65,7 +65,6 @@ function confirmarC(){
         document.getElementById("numAN").placeholder = `a(${n})`
         document.getElementById("numAN").focus()
     }else{
-        window.alert(`Errado! a[${n}] = ${a(n)}`)
+        window.alert(`Errado! a[${n}] =  ${Object(document.getElementById("criarFunc").value)}`)
     }
-    
 }
