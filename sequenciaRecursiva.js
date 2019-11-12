@@ -20,22 +20,22 @@ function iniciarFunc(){
 function seqAtual(){
     let txtSeq = document.getElementById("sequenciaAN")
     if(func == 1){
-        txtSeq.innerText = `a[${n}] = a[${n-1}] + 2•${n}`
+        txtSeq.innerText = `a[${n}] = a[${n-1}] + 2•n`
         document.getElementById("numA1").placeholder = `a[${n-1}]`
-        document.getElementById("numSN").placeholder = `2*${n}`
-        document.getElementById("numAN").placeholder = `a[${n-1}] + 2 * ${n}`
+        document.getElementById("numSN").placeholder = `2•n`
+        document.getElementById("numAN").placeholder = `a[${n-1}] + (2•n)`
     }
     if(func == 2){
-        txtSeq.innerText = `a[${n}] = a[${n-1}] + (2•${n}-1)`
+        txtSeq.innerText = `a[${n}] = a[${n-1}] + ((2•n)-1)`
         document.getElementById("numA1").placeholder = `a[${n-1}]`
-        document.getElementById("numSN").placeholder = `(2*${n})-1`
-        document.getElementById("numAN").placeholder = `a[${n-1}] + (2*${n}-1)`
+        document.getElementById("numSN").placeholder = `(2•n)-1`
+        document.getElementById("numAN").placeholder = `a[${n-1}] + ((2•n)-1)`
     }
     if(func == 3){
-        txtSeq.innerText = `a[${n}] = a[${n-1}] + (${n}+4)`
+        txtSeq.innerText = `a[${n}] = a[${n-1}] + (n+4)`
         document.getElementById("numA1").placeholder = `a[${n-1}]`
-        document.getElementById("numSN").placeholder = `${n}+4`
-        document.getElementById("numAN").placeholder = `a[${n-1}] + (${n}+4)`
+        document.getElementById("numSN").placeholder = `n+4`
+        document.getElementById("numAN").placeholder = `a[${n-1}] + (n+4)`
     }
 }
 function calc(n){
@@ -74,25 +74,48 @@ function confirmar(){
         document.getElementById("numA1").focus()
         seqAtual()
     }else{
-        window.alert(`Errado! a[${n}] = ${calc(n)} e a[${n-1}] = ${calc(n-1)}`)
+        if(func == 1){
+            window.alert(`Errado!\n\nNote que:  a[${n}] = a[${n-1}] + 2•n`)
+        }
+        if(func == 2){
+            window.alert(`Errado!\n\nNote que:  a[${n}] = a[${n-1}] + ((2•n)-1)`)
+        }
+        if(func == 3){
+            window.alert(`Errado!\n\nNote que:  a[${n}] = a[${n-1}] + (n+4)`)
+        }
     }
     
 }
-function avancar_10(element){
-    let n2 = n+10
-    for(;n<n2;n++){
-        let an = Number(document.getElementById("numAN").value)
-        let an1 = Number(document.getElementById("numA1").value)
-        let sn = Number(document.getElementById("numSN").value)
-        an = calc(n)
-        an1 = calc(n-1)
-        sn == an-an1
-        document.getElementById("numAN").value = ""
-        document.getElementById("numA1").value = ""
-        document.getElementById("numSN").value = ""
-        resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
-        element.style.display = "none"
+
+function ajuda(){
+    if(func == 1){
+        window.alert(`a[${n}] = a[${n-1}] + 2•${n}`)
     }
-    document.getElementById("numA1").focus()
-    seqAtual()
+    if(func == 2){
+        window.alert(`a[${n}] = a[${n-1}] + ((2•${n})-1)`)
+    }
+    if(func == 3){
+        window.alert(`a[${n}] = a[${n-1}] + (${n}+4)`)
+    }
+
+}
+function avancar_10(element){
+    if(func != 0){
+        let n2 = n+10
+        for(;n<n2;n++){
+            let an = Number(document.getElementById("numAN").value  )
+            let an1 = Number(document.getElementById("numA1").value)
+            let sn = Number(document.getElementById("numSN").value)
+            an = calc(n)
+            an1 = calc(n-1)
+            sn == an-an1
+            document.getElementById("numAN").value = ""
+            document.getElementById("numA1").value = ""
+            document.getElementById("numSN").value = ""
+            resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
+            element.style.display = "none"
+        }
+        document.getElementById("numA1").focus()
+        seqAtual()
+    }
 }

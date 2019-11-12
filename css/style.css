@@ -57,6 +57,9 @@ section *{
     font-size: 18px; 
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     transition-duration: 0.4s; 
+
+    outline: none;
+    cursor: pointer;
 } 
 .button:hover{ 
     background-color: rgb(173, 172, 255);
@@ -118,7 +121,8 @@ section *{
     background-color: gainsboro;
     margin: 5px 0;
     border-radius: 25px;
-    transition: 0.3s
+    transition: 0.3s;
+    outline: none;
 }
 .nav {
     width: 30px;

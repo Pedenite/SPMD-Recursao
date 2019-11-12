@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SPMD-RECURSÃO</title>
+    <title>Exercícios</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIRFJh1EtljG6Oi-1sxvYXNqSYqHQgaqaAKRlWzye32KgFq8P8" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="animation/animate.css">
     <link rel="stylesheet" href="css/style2.css">
@@ -35,13 +36,13 @@
               <a href="#main-menu-toggle"
                  id="main-menu-close"
                  class="menu-close"
-                 aria-label="Close main menu">
+                 aria-label="Close main menu" style = "border: none;">
                 <span class="sr-only">Close main menu</span>
                 <span class="fa fa-close" aria-hidden="true"></span>
                 <i class="material-icons">clear</i>
               </a>
               <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" style = "margin-top: 10px;">Home</a></li>
                 <li><a href="index2.html">Criar Função</a></li>
                 <li><a href="index3.html">Aplicações</a></li>
                 <li><a href="index4.html">Exercícios</a></li>
@@ -58,7 +59,7 @@
         <h1>Sequências Recursivas</h1>
         <p>
             <select class="select" name="funcao" id="funcao" onchange="iniciarFunc()">
-                <option>Selecione uma função...</option>
+                <option value="0">Selecione uma função...</option>
                 <option value="1">a[1] = 2, a[n] = a[n-1] + 2n</option>
                 <option value="2">a[1] = 1, a[n] = a[n-1] + (2n-1)</option>
                 <option value="3">a[1] = 5, a[n] = a[n-1] + (n+4)</option>
@@ -78,6 +79,7 @@
                 
                 <button class="button" id="btn-avancar10" type="button" onclick="avancar_10(this)">Avançar 10</button>
                 <button class="button" type="submit">Confirmar</button>
+                <button class="button"  type = "button" onclick="ajuda()">Ajuda</button>
             </form>
         </div>
         <!--a class="a" type="button" href="index2.html">Criar sua função</a-->    

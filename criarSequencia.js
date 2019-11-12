@@ -1,6 +1,7 @@
 var qtd = Number(document.getElementById("valInit").value)
 var n
 var func
+var aux = 0
 function valoresInit(){
     qtd = Number(document.getElementById("valInit").value)
     n = qtd + 1
@@ -65,6 +66,19 @@ function confirmarC(){
         document.getElementById("numAN").placeholder = `a(${n})`
         document.getElementById("numAN").focus()
     }else{
-        window.alert(`Errado! a[${n}] =  ${Object(document.getElementById("criarFunc").value)}`)
+        window.alert(`Errado!\n\nNote que:  a[${n}] =  ${Object(document.getElementById("criarFunc").value)}`)
+    }
+}
+function ajudaC(){
+    window.alert(`a[${n}] = ${a(n)}`)
+    sumirAjudaC()
+}
+
+function sumirAjudaC(){
+    
+    if(aux < 3){ aux++
+    }else{
+        document.getElementById("buttonAjudaC").className = "sumir"
+        aux = 0
     }
 }
