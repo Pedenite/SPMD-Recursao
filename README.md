@@ -13,5 +13,5 @@ Visando a resolução de exercícios de recursão, recriamos o software em javas
 - [x] Adicionar uma interface para possibilitar ao usuário, criar suas proprias funções recursivas.
 - [x] Adicionar texto sobre recursão.
 - [x] Melhorar desempenho no pc do vocalista fazendo o fogo do DOOM iniciar apenas quando a animação for executada (ou algo assim).
-- [ ] Adicionar botão de ajuda plenamente funcional
+- [x] Adicionar botão de ajuda plenamente funcional
 - [ ] Adicionar feedback
