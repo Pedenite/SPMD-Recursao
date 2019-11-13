@@ -5,15 +5,9 @@ var func = Number(document.getElementById("funcao").value)
 //Vars FeedBack
 var acertos = 0
 var erros = 0
-var contAjuda = 0
-var cont = 0
-var controlError
-var controlHint
+var dicas = 0
 
-function controlador(){ //Função para saber se ainda está na mesma questão ou não
-    controlError = 0
-    controlHint = 0
-}
+
 
 function iniciarFunc(){
     func = Number(document.getElementById("funcao").value)
@@ -30,7 +24,7 @@ function iniciarFunc(){
     seqAtual()
     document.getElementById("btn-avancar10").style.display = ''
     zerarContadores()
-    controlador()
+    feedback()
 }
 
 function seqAtual(){
@@ -93,15 +87,8 @@ function confirmar(){
         n++
         document.getElementById("numA1").focus()
         seqAtual()
-        if(controlHint == 1){
-            contAjuda++
-            controlador()
-        }else if(controlError == 1){
-            cont++
-            controlador()
-        }else{
-            acertos++
-        }
+        acertos++
+        feedback()
     }else{
         if(func == 1){
             window.alert(`Errado!\n\nNote que:  a[${n}] = a[${n-1}] + 2•n`)
@@ -112,10 +99,8 @@ function confirmar(){
         if(func == 3){
             window.alert(`Errado!\n\nNote que:  a[${n}] = a[${n-1}] + (n+4)`)
         }
-        if(controlError == 0){
-            erros++
-            controlError = 1
-        }
+        erros++
+        feedback()
     }
     
 }
@@ -152,23 +137,16 @@ function ajuda(){
     if(func == 3){
         window.alert(`a[${n}] = a[${n-1}] + (${n}+4)`)
     }
-    if(controlHint == 0){
-        controlHint = 1
-    }
-}
-
-function feedBack(){ //Retorna o feedBack em uma caixa de diálogo
-    if(acertos > ((cont/2)+5)){
-        window.alert(`Parabéns!!!\n\nVocê teve mais acertos que a média!\n\nAcertos: ${acertos}\nErros: ${erros}\nResolvidas com Ajuda: ${contAjuda}`)
-    }
-    if(acertos < ((cont/2)+5)){
-        window.alert(`Exercite um Pouco Mais!\n\nVocê teve acertos inferior à média\n\nAcertos: ${acertos}\nErros: ${erros}\nResolvidas com Ajuda: ${contAjuda}`)
-    }
+    dicas++
+    feedback()
 }
 
 function zerarContadores(){
     acertos = 0
     erros = 0
-    contAjuda = 0
-    cont = 0
+    dicas = 0
+}
+
+function feedback(){
+    document.getElementById("feedback").innerText = `Acertos: ${acertos}, Erros ${erros}, Dicas ${dicas}. Nota: ${(((acertos/(acertos+erros))*10)-(dicas/3)).toFixed(2)}`
 }

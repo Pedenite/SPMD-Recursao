@@ -70,8 +70,9 @@
                     <tr><td>n</td><td>a[n]</td></tr>
             </table>
         </div>
-        <div id="inputs" style="width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black; max-height: 20vh;">
+        <div id="inputs" style="width: fit-content;width: 70vh; margin: 5px auto; padding: 10px;border: 1px solid black;">
             <p id="sequenciaAN"></p>
+            <p id="feedback"></p>
             <form action="javascript:confirmar()">
                 <input type="number" name="" id="numA1" style="max-width: calc(65vh/3);"> 
                 <input type="number" name="" id="numSN" style="max-width: calc(65vh/3);"> 
@@ -82,16 +83,11 @@
                 <button class="button"  type = "button" onclick= "ajuda()" > Ajuda </button>
             </form>
         </div>
-        <button class="button"  type = "button" onclick="feedBack()">Resultado</button>
         <!--a class="a" type="button" href="index2.html">Criar sua função</a-->    
         
         </span>
     </section>
 
     <script src="sequenciaRecursiva.js"></script>
-    <script src="animation/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
     </body>
 </html>

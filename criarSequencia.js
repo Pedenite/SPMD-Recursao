@@ -2,6 +2,9 @@ var qtd = Number(document.getElementById("valInit").value)
 var n
 var func
 var aux = 0
+var dicas = 0
+var acertos = 0
+var erros = 0
 function valoresInit(){
     qtd = Number(document.getElementById("valInit").value)
     n = qtd + 1
@@ -60,17 +63,23 @@ function avancar_10C(element){
 function confirmarC(){
     let an = Number(document.getElementById("numAN").value)
     if(an == a(n)){
+        acertos++
+        feedback()
         document.getElementById("numAN").value = ""
         resultado.innerHTML += `<td>${n}</td><td>${an}</td>`
         n++
         document.getElementById("numAN").placeholder = `a(${n})`
         document.getElementById("numAN").focus()
     }else{
+        erros++
+        feedback()
         window.alert(`Errado!\n\nNote que:  a[${n}] =  ${Object(document.getElementById("criarFunc").value)}`)
     }
 }
 function ajudaC(){
     window.alert(`a[${n}] = ${a(n)}`)
+    dicas++
+    feedback()
     sumirAjudaC()
 }
 
@@ -81,4 +90,7 @@ function sumirAjudaC(){
         document.getElementById("buttonAjudaC").className = "sumir"
         aux = 0
     }
+}
+function feedback(){
+    document.getElementById("feedback").innerText = `Acertos: ${acertos}, Erros ${erros}, Dicas ${dicas}. Nota: ${(((acertos/(acertos+erros))*10)-(dicas/3)).toFixed(2)}`
 }
