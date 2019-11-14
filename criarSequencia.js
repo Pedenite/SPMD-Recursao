@@ -85,7 +85,8 @@ function ajudaC(){
 
 function sumirAjudaC(){
     
-    if(aux < 3){ aux++
+    if(aux < 2){ 
+        aux++
     }else{
         document.getElementById("buttonAjudaC").className = "sumir"
         aux = 0
