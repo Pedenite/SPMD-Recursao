@@ -148,5 +148,5 @@ function zerarContadores(){
 }
 
 function feedback(){
-    document.getElementById("feedback").innerText = `Acertos: ${acertos}, Erros ${erros}, Dicas ${dicas}. Nota: ${(((acertos/(acertos+erros))*10)-(dicas/3)).toFixed(2)}`
+    document.getElementById("feedback").innerText = `Acertos: ${acertos}, Erros ${erros}, Dicas ${dicas}. Nota: ${(((acertos/(acertos+erros))*10)-(dicas/((acertos/(acertos+erros))*10))).toFixed(2)}`
 }
